@@ -1,10 +1,11 @@
 version: '3'
 services:
   db:
-    container_name: todo_db
+    container_name: todo_container
     image: postgres:10.7
     volumes:
       - ./db/initdb.d:/docker-entrypoint-initdb.d
-      - ./init-users-db.sh:/docker-entrypoint-initdb.d/init-users-db.sh
+      - ./init-users-db.sh:/docker-entrypoint-initdb.d/init.sql
+      # - ./init-db.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - '5445:5432'
