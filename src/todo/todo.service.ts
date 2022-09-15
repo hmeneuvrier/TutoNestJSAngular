@@ -5,7 +5,7 @@ import {v4 as uuidv4} from 'uuid';
 import { TodoDto } from './dto/todo.dto';
 import { TodoCreateDto } from './dto/todo.create.dto';
 import { TodoListDto } from './dto/todo.list.dto';
-import { TodoEntity } from './entity/todo.entity';
+import { TodoEntity } from '@todo/entity/todo.entity';
 import { toPromise } from '../shared/utils';
 
 import { toTodoDto } from '../shared/mapper';
